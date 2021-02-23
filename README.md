@@ -16,9 +16,14 @@ HTML, CSS, JavaScript, Angular, PHP, Laravel, MySQL
 
 ```dotenv
 sudo docker-compose up -d --build --force-recreate
+```
+
+2\) Run migrations for MYSQL database:
+
+```dotenv
 sudo docker-compose exec laravel-back /app/run.sh
 ```
 
-2\) Visit http://localhost:4200/ and start using the app
+3. Visit http://localhost:4200/ and start using the app
 
 **MySQL database is persistent (in memory)** since data located in volume.
