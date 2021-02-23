@@ -21,4 +21,4 @@ sudo docker-compose exec laravel-back /app/run.sh
 
 2\) Visit http://localhost:4200/ and start using the app
 
-**MySQl database is persistent (in memory)** since data located in volume.
+**MySQL database is persistent (in memory)** since data located in volume.
