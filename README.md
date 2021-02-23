@@ -18,7 +18,7 @@ HTML, CSS, JavaScript, Angular, PHP, Laravel, MySQL
 sudo docker-compose up -d --build --force-recreate
 ```
 
-2\) Run migrations for MYSQL database:
+2\) Run migrations for MySQL database:
 
 ```dotenv
 sudo docker-compose exec laravel-back /app/run.sh
