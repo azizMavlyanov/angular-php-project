@@ -1,0 +1,12 @@
+<div class="post-preview">
+    <a (click)="go()" class="pointer">
+      <h4 class="post-title" [textContent]="post.heading">
+      </h4>
+      <p class="post-subtitle">{{ post.subheading.length > 48 ? post.subheading.substring(0, 50)+"..." : post.subheading }}
+      </p>
+    </a>
+    <p class=" post-meta">Автор: 
+      <a href="#" [textContent]="post.user.name"></a>
+    </p>
+  </div>
+  

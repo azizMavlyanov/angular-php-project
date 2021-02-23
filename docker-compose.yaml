@@ -1,0 +1,35 @@
+version: '3'
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - ./db_data:/var/lib/mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: blogdb
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      
+  laravel-back:
+    build:
+      context: ./server/
+      args:
+        JWT_SECRET: your_jwt_secret
+        MAIL_USERNAME: your@gmail.com
+        MAIL_PASSWORD: your_gmail_password # Check link https://support.google.com/accounts/answer/185833?hl=en
+    ports:
+      - "8000:8000"
+    depends_on:
+      - "db"
+
+  angular-front:
+    build: ./client/
+    ports:
+      - "4200:80"
+  
+
+volumes:
+    db_data: {}
